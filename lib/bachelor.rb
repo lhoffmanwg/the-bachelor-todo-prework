@@ -70,6 +70,5 @@ def get_average_age_for_season(data, season)
     age_counter = age_counter + 1
    end
    average_age = (total_age + age_counter/2)/age_counter
-   binding.pry
    return average_age
 end
