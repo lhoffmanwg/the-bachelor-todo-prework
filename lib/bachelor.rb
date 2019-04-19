@@ -10,6 +10,7 @@ def get_first_name_of_season_winner(data, season)
           if value == "Winner"
             winner_array = details["name"].split
             winner = winner_array[0]
+            #binding.pry
             return winner
           end 
         end
@@ -45,8 +46,8 @@ def count_contestants_by_hometown(data, hometown)
 end
 
 def get_occupation(data, hometown)
- hometown_counter = 0  
- contestant_occupation = ""
+ #hometown_counter = 0  
+ #contestant_occupation = ""
  data.each do |hash_season, contestant_info_array|
    contestant_info_array.each do |info_hash|
      info_hash.each do |info_key, info_value|
@@ -56,7 +57,7 @@ def get_occupation(data, hometown)
      end     
    end   
  end   
- return contestant_occupation
+ #return contestant_occupation
 end
 
 def get_average_age_for_season(data, season)
@@ -69,5 +70,6 @@ def get_average_age_for_season(data, season)
     age_counter = age_counter + 1
    end
    average_age = (total_age + age_counter/2)/age_counter
+   binding.pry
    return average_age
 end
